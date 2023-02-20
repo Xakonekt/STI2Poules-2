@@ -1,0 +1,19 @@
+* {
+    margin: 0; /* Marge par défaut du navigateur */
+    padding: 0; /* Marge par défaut du navigateur */
+    list-style: none; /* Pas de soulignement sur les boutons */
+    text-decoration: none; /* Pas de modification par défaut du texte */
+    font-family: 'Poppins', sans-serif; /* Police d'écriture */
+    scroll-behavior: smooth; /* Scroll lissé */
+    box-sizing: border-box;
+    background-color: aqua;
+}
+
+.cookie {
+    height: 50vh;
+    width: 60vw;
+    background-color: beige;
+    position: fixed;
+    top: 25vh;
+    left: 50vh;
+}

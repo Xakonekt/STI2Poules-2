@@ -1,0 +1,375 @@
+* {
+    margin: 0; /* Marge par défaut du navigateur */
+    padding: 0; /* Marge par défaut du navigateur */
+    list-style: none; /* Pas de soulignement sur les boutons */
+    text-decoration: none; /* Pas de modification par défaut du texte */
+    font-family: 'Poppins', sans-serif; /* Police d'écriture */
+    scroll-behavior: smooth; /* Scroll lissé */
+    box-sizing: border-box;
+}
+
+/* Nav Bar */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+    padding: 16px 32px;
+    border-bottom: 3px solid #fff;
+}
+
+img {
+    width: 200px;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #000;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background-color: #FF7A00;
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+    background-color: #FF7A00;
+}
+
+.menu {
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    margin: 0 -16px;
+}
+
+.menu a {
+    color: #000;
+    margin: 0 16px;
+    font-weight: 600;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;    
+}
+
+.menu a.is-active, .menu a:hover {
+    background-color: #FF7A00;
+    color: #fff;
+    transition: 0.4s;
+}
+
+@media (min-width: 800px) {
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: #FF7A00;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: #ff8615;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    background-color: #ff9f46;
+}
+
+.mobile-nav a.is-active {
+    background-color: #ff9f46;
+}
+.connection {
+    position: absolute ;
+    top: 27px;
+    height:30%;
+    width: 30px;  
+    right: 225px;
+}
+/* Indication Pages */
+.onglet-side {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    z-index: 999;
+}
+
+.onglet-side a {
+    height: 15px;
+    width: 15px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 3px solid #ff9f46;
+    border-radius: 50px;
+}
+
+.onglet-side a.active {
+    height: 15px;
+    width: 15px;
+    margin: 5px 0;
+    background-color: #ff9f46;
+}
+
+/* Section 1 */
+    /* Card */
+.sec1{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sec1 .card {
+    position: relative;
+    top: 30vh;
+    left: 120vh;
+    height: 400px;
+    width: 500px;
+    background-color: #e9e9e9;
+    border-radius: 20px; 
+    border: 10px;
+}
+.sec1 .titre1 {
+    position: absolute;
+    top: -30px;
+    left: 70px;
+    font-size: 2.3em;
+    
+}
+.sec1 .barre1 {
+    position: absolute;
+    height: 7px;
+    width: 75px;
+    top: 15px;
+    left: 70px;
+    background-color: #ff8615;
+    border-radius: 99px;
+}
+.sec1 .content h4 {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    font-size: 1.7em;
+}
+.sec1 .content p {
+    position: absolute;
+    top: 110px;
+    left: 35px;
+    right: 35px;
+    font-size: 1.3em;
+}
+.sec1 .content a {
+    color: #000;
+    position: absolute;
+    top: 335px;
+    left: 145px;
+    font-size: 1.3em;
+    font-family: 'Poppins';
+    margin: 0 16px;
+    font-weight: 600;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+}
+
+.sec1 .content a:hover {
+    background-color: #FF7A00;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/* Section 2 */
+    /* Card2 */
+.card2 {
+    position: relative;
+    top: 80vh;
+    left: 24vh;
+    height: 400px;
+    width: 500px;
+    background-color: #e9e9e9;
+    border-radius: 20px; 
+    border: 10px;
+}
+
+.titre2 {
+    position: absolute;
+    top: -30px;
+    left: 70px;
+    font-size: 2.3em;
+}
+
+.barre2 {
+    position: absolute;
+    height: 7px;
+    width: 75px;
+    top: 15px;
+    left: 70px;
+    background-color: #ff8615;
+    border-radius: 99px;
+}
+
+.content2 h4 {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    font-size: 1.7em;
+}
+
+.content2 p {
+    position: absolute;
+    top: 110px;
+    left: 35px;
+    right: 35px;
+    font-size: 1.3em;
+}
+
+.content2 a {
+    color: #000;
+    position: absolute;
+    top: 335px;
+    left: 145px;
+    font-size: 1.3em;
+    font-family: 'Poppins';
+    margin: 0 16px;
+    font-weight: 600;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+}
+    
+.content2 a:hover {
+    background-color: #FF7A00;
+    color: #fff;
+    transition: 0.4s;
+}
+
+
+/* Section 3 */
+    /* Card3 */
+    .card3 {
+        position: relative;
+        top: 130vh;
+        left: 120vh;
+        height: 400px;
+        width: 500px;
+        background-color: #e9e9e9;
+        border-radius: 20px; 
+        border: 10px;
+    }
+    .titre3 {
+        position: absolute;
+        top: -30px;
+        left: 70px;
+        font-size: 2.3em;
+        
+    }
+    .barre3 {
+        position: absolute;
+        height: 7px;
+        width: 75px;
+        top: 15px;
+        left: 70px;
+        background-color: #ff8615;
+        border-radius: 99px;
+    }
+    .content3 h4 {
+        position: absolute;
+        top: 40px;
+        left: 25px;
+        font-size: 1.7em;
+    }
+    .content3 p {
+        position: absolute;
+        top: 110px;
+        left: 35px;
+        right: 35px;
+        font-size: 1.3em;
+    }
+    .content3 a {
+        color: #000;
+        position: absolute;
+        top: 335px;
+        left: 145px;
+        font-size: 1.3em;
+        font-family: 'Poppins';
+        margin: 0 16px;
+        font-weight: 600;
+        transition: 0.4s;
+        padding: 8px 16px;
+        border-radius: 99px;
+    }
+    
+    .content3 a:hover {
+        background-color: #FF7A00;
+        color: #fff;
+        transition: 0.4s;
+    }
